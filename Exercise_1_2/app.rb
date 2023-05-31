@@ -3,10 +3,11 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 
 class Application < Sinatra::Base
-  get '/hello' do
+  post '/submit' do
     name = params[:name]
+    message = params[:message]
 
-    return "Hello #{name}"
+    return "Thanks #{name}, you sent this message: #{message}"
   end
 
   # This allows the app code to refresh
