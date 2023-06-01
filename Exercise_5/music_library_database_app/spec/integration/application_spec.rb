@@ -21,7 +21,7 @@ describe Application do
       
     end
   end
-  
+    # POST albums for exercise phase 2 Excersice 5.
   context 'POST /albums' do
     it 'should create a new album' do
       response = post(
