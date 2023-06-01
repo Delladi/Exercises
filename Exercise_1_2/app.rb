@@ -1,6 +1,6 @@
 #This is the main file of the applicatioin and contain application class
 require 'sinatra/base'
-require 'sinatra/reloader'
+#require 'sinatra/reloader'
 
 class Application < Sinatra::Base
   get '/names' do
@@ -8,11 +8,17 @@ class Application < Sinatra::Base
     return "#{names}"
   end
   
+  post '/sort-names' do
+    names = params[:names].split(",")
+    sorted_names = names.sort.join(",")
+    sorted_names
+  end
+  
   # This allows the app code to refresh
   # without having to restart the server.
-configure :development do
-    register Sinatra::Reloader
-  end
+# configure :development do
+#     register Sinatra::Reloader
+#   end
 end
 
 # get '/names' do
