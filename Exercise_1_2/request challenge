@@ -1,0 +1,9 @@
+# Request:
+POST /submit
+
+# With body parameters:
+name=Leo
+message=Hello world
+
+# Expected response (2OO OK):
+Thanks Leo, you sent this message: "Hello world"
