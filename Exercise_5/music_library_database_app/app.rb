@@ -24,7 +24,7 @@ class Application < Sinatra::Base
 
     return response
   end
-  
+  # POST albums for exercise phase 2 Excersice 5.
   post '/albums' do
     repo = AlbumRepository.new
     new_album = Album.new
